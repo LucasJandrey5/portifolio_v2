@@ -3,12 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Dev Full Stack</title>
+    <meta name="description" content="Portfólio de Lucas Jandrey - Desenvolvedor Full Stack com experiência em TypeScript, React, Node.js, PHP e Laravel. Especialista em desenvolvimento web e soluções escaláveis." />
+    <meta name="keywords" content="desenvolvedor full stack, portfolio, lucas jandrey, typescript, react, node.js, php, laravel, desenvolvimento web, frontend, backend, engenharia de software" />
+    <meta name="author" content="Lucas Jandrey" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111827" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lucasjandrey.com/" />
+    <meta property="og:title" content="Lucas Jandrey | Desenvolvedor Full Stack" />
+    <meta property="og:description" content="Portfólio de Lucas Jandrey - Desenvolvedor Full Stack com experiência em TypeScript, React, Node.js, PHP e Laravel." />
+    <meta property="og:image" content="https://lucasjandrey.com/assets/images/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lucasjandrey.com/" />
+    <meta property="twitter:title" content="Lucas Jandrey | Desenvolvedor Full Stack" />
+    <meta property="twitter:description" content="Portfólio de Lucas Jandrey - Desenvolvedor Full Stack com experiência em TypeScript, React, Node.js, PHP e Laravel." />
+    <meta property="twitter:image" content="https://lucasjandrey.com/assets/images/og-image.png" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lucasjandrey.com/" />
+
+    <title>Lucas Jandrey | Desenvolvedor Full Stack</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" />
+    <link rel="preload" href="https://unpkg.com/aos@2.3.4/dist/aos.css" as="style" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Tailwind dark mode configuration
       tailwind.config = {
         darkMode: "class",
+        theme: {
+          extend: {
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+            }
+          }
+        }
       };
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -22,7 +64,6 @@
       body {
         font-family: "Fira Code", monospace;
         scroll-behavior: smooth;
-
         max-width: 100%;
         overflow-x: hidden;
       }
@@ -55,6 +96,62 @@
 
       .social-link:hover {
         transform: translateY(-3px);
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Focus styles for better accessibility */
+      *:focus {
+        outline: 2px solid #0ea5e9;
+        outline-offset: 2px;
+      }
+
+      /* Loading animation */
+      .loading {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .dark ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+
+      .dark ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+      }
+
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
       }
     </style>
   </head>
@@ -142,15 +239,17 @@
             <div
               id="typing-text"
               class="text-lg sm:text-xl md:text-2xl font-mono"
+              aria-label="Profissão e habilidades"
             ></div>
           </div>
 
           <!-- Social Links -->
-          <div class="justify-center md:justify-start flex gap-4 mt-6">
+          <div class="justify-center md:justify-start flex gap-4 mt-6" role="navigation" aria-label="Redes sociais">
             <!-- LinkedIn -->
             <a
               href="https://linkedin.com/in/lucas-jandrey"
               target="_blank"
+              rel="noopener noreferrer"
               class="social-link text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all relative group duration-300"
               aria-label="LinkedIn"
             >
@@ -180,6 +279,7 @@
             <a
               href="https://github.com/LucasJandrey5"
               target="_blank"
+              rel="noopener noreferrer"
               class="social-link text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all relative group duration-300"
               aria-label="GitHub"
             >
@@ -199,6 +299,7 @@
             <a
               href="https://instagram.com/lucas_jandrey_"
               target="_blank"
+              rel="noopener noreferrer"
               class="social-link text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all relative group duration-300"
               aria-label="Instagram"
             >
@@ -291,8 +392,7 @@
       >
         <div class="flex">
           <a
-            href="/seu-curriculo.pdf"
-            download
+            href="/curriculo.html"
             class="flex items-center bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full gap-2 backdrop-blur-sm border border-gray-300 dark:border-white/10 transition-all duration-300 hover:scale-105"
           >
             <span>Baixar CV</span>
@@ -341,9 +441,8 @@
                   class="st0"
                   d="M40.1851,33.281c-0.6155-0.3081-3.6419-1.797-4.2061-2.0026c-0.5642-0.2054-0.9746-0.3081-1.3849,0.3081   c-0.4103,0.6161-1.59,2.0027-1.9491,2.4136c-0.359,0.4106-0.7182,0.4623-1.3336,0.1539c-0.6155-0.3081-2.5989-0.958-4.95-3.0551   c-1.83-1.6323-3.0653-3.6479-3.4245-4.2643c-0.359-0.6161-0.0382-0.9492,0.27-1.2562c0.2769-0.2759,0.6156-0.7189,0.9234-1.0784   c0.3077-0.3593,0.4103-0.6163,0.6155-1.0268c0.2052-0.4109,0.1027-0.7704-0.0513-1.0784   c-0.1539-0.3081-1.3849-3.3379-1.8978-4.5706c-0.4998-1.2001-1.0072-1.0375-1.3851-1.0566   c-0.3585-0.0179-0.7694-0.0216-1.1797-0.0216s-1.0773,0.1541-1.6414,0.7702c-0.5642,0.6163-2.1545,2.1056-2.1545,5.1351   c0,3.0299,2.2057,5.9569,2.5135,6.3676c0.3077,0.411,4.3405,6.6282,10.5153,9.2945c1.4686,0.6343,2.6152,1.013,3.5091,1.2966   c1.4746,0.4686,2.8165,0.4024,3.8771,0.2439c1.1827-0.1767,3.6419-1.489,4.1548-2.9267c0.513-1.438,0.513-2.6706,0.359-2.9272   C41.211,33.7433,40.8006,33.5892,40.1851,33.281z"
                 />
-              </g>
-            </svg>
-          </a>
+              </svg>
+            </a>
         </div>
       </div>
     </section>
@@ -355,9 +454,9 @@
       data-aos="fade-right"
     >
       <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
           Sobre Mim
-        </h3>
+        </h2>
         <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
           Sou desenvolvedor full stack com foco em entregar soluções que
           funcionam na prática. Já quebrei muita coisa pra aprender como
@@ -383,216 +482,290 @@
           >
             Tecnologias 🚀
           </h2>
+          <p class="text-gray-600 dark:text-gray-400 text-center max-w-2xl">
+            Tecnologias que utilizo no meu dia a dia para criar soluções robustas e escaláveis.
+          </p>
         </div>
 
         <div
           class="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-6 lg:gap-y-12 place-items-center"
+          role="list"
+          aria-label="Lista de tecnologias"
         >
           <!-- JavaScript -->
-          <div class="flex flex-col items-center gap-2">
+          <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class=""
+              class="transform transition-transform duration-300 group-hover:scale-110"
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              ><img
+              aria-label="JavaScript"
+            >
+              <img
                 alt="Javascript"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Javascript</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Javascript</p>
           </div>
 
           <!-- TypeScript -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://www.typescriptlang.org/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://www.typescriptlang.org/"
+              aria-label="TypeScript"
+            >
+              <img
                 alt="Typescript"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Typescript</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Typescript</p>
           </div>
 
           <!-- React -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://react.dev/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://react.dev/"
+              aria-label="React"
+            >
+              <img
                 alt="React"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">React</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">React</p>
           </div>
 
           <!-- PHP -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://reactnative.dev/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://www.php.net/"
+              aria-label="PHP"
+            >
+              <img
                 alt="PHP"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">PHP</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">PHP</p>
           </div>
 
           <!-- Laravel -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://reactnative.dev/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://laravel.com/"
+              aria-label="Laravel"
+            >
+              <img
                 alt="Laravel"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Laravel</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Laravel</p>
           </div>
 
           <!-- Next.js -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://nextjs.org/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://nextjs.org/"
+              aria-label="Next.js"
+            >
+              <img
                 alt="Next.js"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Next.js</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Next.js</p>
           </div>
 
           <!-- Node.js -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://nodejs.org/en"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://nodejs.org/en"
+              aria-label="Node.js"
+            >
+              <img
                 alt="Node.js"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Node.js</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Node.js</p>
           </div>
 
           <!-- MySQL -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://www.mysql.com/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://www.mysql.com/"
+              aria-label="MySQL"
+            >
+              <img
                 alt="MySQL"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">MySQL</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">MySQL</p>
           </div>
 
           <!-- TailwindCSS -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://tailwindcss.com/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://tailwindcss.com/"
+              aria-label="TailwindCSS"
+            >
+              <img
                 alt="Tailwindcss"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Tailwindcss</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Tailwindcss</p>
           </div>
 
           <!-- Cloudflare -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://www.cloudflare.com/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://www.cloudflare.com/"
+              aria-label="Cloudflare"
+            >
+              <img
                 alt="Cloudflare"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Cloudflare</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Cloudflare</p>
           </div>
 
           <!-- Git -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://git-scm.com/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://git-scm.com/"
+              aria-label="Git"
+            >
+              <img
                 alt="Git"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Git</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Git</p>
           </div>
 
           <!-- Docker -->
-          <div class="flex flex-col items-center gap-2">
-            <a target="_blank" class="" href="https://www.docker.com/"
-              ><img
+          <div class="flex flex-col items-center gap-2 group">
+            <a 
+              target="_blank" 
+              class="transform transition-transform duration-300 group-hover:scale-110"
+              href="https://www.docker.com/"
+              aria-label="Docker"
+            >
+              <img
                 alt="Docker"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
                 data-nimg="1"
-                class="transition-transform duration-300 md:hover:scale-110"
+                class="transition-transform duration-300"
                 style="color: transparent"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-            /></a>
-            <p class="text-normal text-base md:text-lg">Docker</p>
+              />
+            </a>
+            <p class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">Docker</p>
           </div>
         </div>
       </div>
@@ -745,15 +918,15 @@
       class="py-20 px-6 bg-gray-200 dark:bg-gray-900 transition-colors duration-200"
     >
       <div class="max-w-6xl mx-auto">
-        <h3
+        <h2
           class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white"
         >
           Projetos em Destaque
-        </h3>
-        <div class="flex flex-col gap-8">
+        </h2>
+        <div class="flex flex-col gap-8" role="list" aria-label="Lista de projetos">
           <!-- Oeste Orgânicos -->
           <div
-            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200"
+            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200 hover:shadow-xl transform hover:-translate-y-1 transition-transform duration-300"
             data-aos="zoom-in"
           >
             <div
@@ -762,7 +935,8 @@
               <img
                 src="./assets/images/oeste_organicos.png"
                 alt="Oeste Orgânicos"
-                class="w-full text-center mx-auto"
+                class="w-full text-center mx-auto rounded-lg shadow-md"
+                loading="lazy"
               />
             </div>
             <div
@@ -774,7 +948,7 @@
                 Oeste Orgânicos
               </h3>
               <p class="text-sm text-gray-400 italic mb-4">
-                Em desenvolvimento
+                Em desenvolvimento | 2023 - Presente
               </p>
 
               <p
@@ -787,15 +961,30 @@
                 segurança e integração entre sistemas.
               </p>
 
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >MySQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >JWT</span
+                >
+              </div>
+
               <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
-                <li class="text-gray-600 dark:text-gray-300">
-                  <span
-                    class="font-semibold text-emerald-600 dark:text-emerald-400"
-                    >Tecnologias:</span
-                  >
-                  Laravel, Inertia.js, React, TypeScript, JWT, Mailtrap,
-                  TailwindCSS, MySQL, Git
-                </li>
                 <li class="text-gray-600 dark:text-gray-300">
                   <span
                     class="font-semibold text-emerald-600 dark:text-emerald-400"
@@ -837,29 +1026,34 @@
       class="py-20 px-6 bg-white dark:bg-gray-950 transition-colors duration-200"
     >
       <div class="max-w-6xl mx-auto">
-        <h3
+        <h2
           class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white"
         >
           Experiências
-        </h3>
-        <div class="flex flex-col gap-8">
+        </h2>
+        <div class="flex flex-col gap-8" role="list" aria-label="Lista de experiências">
           <!-- Five Tech -->
           <div
             id="five-tech"
-            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200"
+            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200 hover:shadow-xl transform hover:-translate-y-1 transition-transform duration-300"
             data-aos="zoom-in"
           >
             <div
-              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full"
             >
-              <h3
-                class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-1"
-              >
-                Desenvolvedor Fullstack
-              </h3>
-              <p class="text-sm text-gray-400 italic mb-4">
-                janeiro/2025 - atual
-              </p>
+              <div class="flex items-center gap-4 mb-4">
+
+                <div>
+                  <h3
+                    class="text-xl font-bold text-emerald-600 dark:text-emerald-400"
+                  >
+                    Desenvolvedor Fullstack
+                  </h3>
+                  <p class="text-sm text-gray-400 italic">
+                    Five Tech | janeiro/2025 - atual
+                  </p>
+                </div>
+              </div>
               <p
                 class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4"
               >
@@ -868,39 +1062,77 @@
                 funcionalidades no backend e frontend, além de contribuir
                 ativamente nas decisões técnicas sobre arquitetura de software e
                 modelagem de banco de dados.
-                <br />
-                <br />
-                <strong>Stack:</strong> Laravel, FilamentPHP, MingleJs,
-                TypeScript, React, MySQL, Github.
               </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >FilamentPHP</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
             </div>
           </div>
           <!-- Eletroprev Engenharia -->
           <div
-            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200"
+            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200 hover:shadow-xl transform hover:-translate-y-1 transition-transform duration-300"
             data-aos="zoom-in"
           >
             <div
-              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full"
             >
-              <h3
-                class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-1"
-              >
-                Projetista
-              </h3>
-              <p class="text-sm text-gray-400 italic mb-4">2019 - 2025</p>
+              <div class="flex items-center gap-4 mb-4">
+     
+                <div>
+                  <h3
+                    class="text-xl font-bold text-emerald-600 dark:text-emerald-400"
+                  >
+                    Projetista
+                  </h3>
+                  <p class="text-sm text-gray-400 italic">
+                    Eletroprev Engenharia | 2019 - 2025
+                  </p>
+                </div>
+              </div>
               <p
                 class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4"
               >
                 Atuei como projetista de projetos civis, lidando diretamente com
                 clientes e tomando decisões técnicas. Essa experiência me deu
                 visão de negócio e responsabilidade profissional.
-
-                <br />
-                <br />
-                <strong>Programas:</strong> AutoCAD, Revit, Excel, Word, e
-                outros.
               </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >AutoCAD</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >Revit</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >Excel</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >Word</span
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -914,9 +1146,9 @@
       data-aos="fade-left"
     >
       <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
           Vamos conversar?
-        </h3>
+        </h2>
         <p
           class="text-gray-700 dark:text-gray-300 text-lg mb-8 leading-relaxed"
         >
@@ -927,10 +1159,12 @@
 
         <div
           class="flex flex-col md:flex-row justify-center items-center gap-8 mt-10"
+          role="list"
+          aria-label="Informações de contato"
         >
           <!-- Email -->
           <div
-            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto transform hover:-translate-y-1"
           >
             <div class="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full mb-4">
               <svg
@@ -962,7 +1196,7 @@
 
           <!-- Telefone -->
           <div
-            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto transform hover:-translate-y-1"
           >
             <div class="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full mb-4">
               <svg
@@ -992,6 +1226,28 @@
       </div>
     </section>
 
+    <!-- Botão Voltar ao Topo -->
+    <button
+      onclick="scrollToTop()"
+      class="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+      aria-label="Voltar ao topo"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-gray-700 dark:text-gray-300"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
     <!-- Footer -->
     <footer
       class="bg-gray-100 dark:bg-gray-900 py-6 text-center text-sm text-gray-600 dark:text-gray-400 transition-colors duration-200"
@@ -1018,6 +1274,28 @@
       ) {
         document.documentElement.classList.add("dark");
       }
+
+      // Scroll to top function
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Show/hide scroll to top button
+      window.addEventListener("scroll", function () {
+        const scrollToTopButton = document.querySelector(
+          "button[onclick='scrollToTop()']"
+        );
+        if (window.scrollY > 300) {
+          scrollToTopButton.classList.remove("opacity-0");
+          scrollToTopButton.classList.add("opacity-100");
+        } else {
+          scrollToTopButton.classList.remove("opacity-100");
+          scrollToTopButton.classList.add("opacity-0");
+        }
+      });
 
       const phrases = [
         "Sou desenvolvedor fullstack.",

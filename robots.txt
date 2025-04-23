@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+Sitemap: https://lucasjandrey.com/sitemap.xml 

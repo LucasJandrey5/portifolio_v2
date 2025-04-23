@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0EA5E9"/>
+  
+  <!-- Gradient overlay -->
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  
+  <!-- Content -->
+  <g transform="translate(100, 200)">
+    <text x="0" y="0" font-family="Arial" font-size="48" font-weight="bold" fill="white">
+      Lucas Jandrey
+    </text>
+    <text x="0" y="70" font-family="Arial" font-size="32" fill="white">
+      Desenvolvedor Full Stack
+    </text>
+    <text x="0" y="140" font-family="Arial" font-size="24" fill="white" opacity="0.8">
+      TypeScript • React • Node.js • PHP • Laravel
+    </text>
+  </g>
+  
+  <!-- Logo -->
+  <g transform="translate(900, 200)">
+    <rect width="200" height="200" rx="20" fill="white"/>
+    <path d="M100 50L150 100L200 50" stroke="#0EA5E9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+</svg> 
