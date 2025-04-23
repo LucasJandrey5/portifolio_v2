@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo | Lucas Jandrey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Tailwind dark mode configuration
+      tailwind.config = {
+        darkMode: "class",
+      };
+
+      // Add dark mode toggle functionality
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem(
+          "darkMode",
+          document.documentElement.classList.contains("dark") ? "true" : "false"
+        );
+      }
+
+      // Check for saved dark mode preference
+      if (
+        localStorage.getItem("darkMode") === "true" ||
+        (!localStorage.getItem("darkMode") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <style>
+      body {
+        font-family: "Fira Code", monospace;
+      }
+    </style>
+  </head>
+  <body
+    class="max-w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200"
+  >
+    <main
+      class="max-w-4xl mx-auto my-10 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-10"
+    >
+      <!-- Dark Mode Toggle -->
+      <button
+        onclick="toggleDarkMode()"
+        class="fixed top-4 right-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+      >
+        <span class="block dark:hidden">🌙</span>
+        <span class="hidden dark:block">☀️</span>
+      </button>
+
+      <!-- Download PDF Button -->
+      <a
+        href="/assets/lucas_jandrey.pdf"
+        download
+        class="fixed top-4 left-4 p-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white transition-colors duration-200 flex items-center"
+      >
+        <span>📄 Download CV</span>
+      </a>
+
+      <!-- Cabeçalho -->
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-teal-600 dark:text-teal-400">
+          Lucas Jandrey
+        </h1>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          Desenvolvedor Full Stack | Estudante de Engenharia de Software
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          lucasjandrey5@gmail.com | (49) 99920-0885 | github.com/LucasJandrey5
+        </p>
+        <div class="flex justify-center gap-4 mt-4">
+          <a
+            href="https://linkedin.com/in/lucas-jandrey"
+            target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/LucasJandrey5"
+            target="_blank"
+            class="text-gray-700 dark:text-gray-300 hover:underline"
+            >GitHub</a
+          >
+          <a
+            href="https://instagram.com/lucas_jandrey_"
+            target="_blank"
+            class="text-pink-600 dark:text-pink-400 hover:underline"
+            >Instagram</a
+          >
+        </div>
+      </header>
+
+      <!-- Perfil -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-teal-500 dark:text-teal-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-4"
+        >
+          Perfil
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Desenvolvedor full stack com foco em entregar soluções que funcionam
+          na prática. Trabalho com TypeScript, React, Node.js, PHP e Laravel,
+          mas o que me move é resolver problemas reais — seja com código,
+          arquitetura ou ideias inovadoras. Atualmente curso Engenharia de
+          Software e estou sempre em busca do próximo desafio técnico.
+        </p>
+      </section>
+
+      <!-- Experiência -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-teal-500 dark:text-teal-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-4"
+        >
+          Experiência Profissional
+        </h2>
+
+        <div class="mb-6">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            Desenvolvedor Full Stack - Five Tech
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Janeiro 2025 – Atual
+          </p>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2"
+          >
+            <li>
+              Desenvolvimento de plataforma web para gestão de processos de
+              licitações
+            </li>
+            <li>Implementação de funcionalidades no backend e frontend</li>
+            <li>
+              Contribuição em decisões técnicas sobre arquitetura de software
+            </li>
+            <li>Modelagem de banco de dados</li>
+            <li>
+              <span class="font-medium">Stack:</span> Laravel, FilamentPHP,
+              MingleJs, TypeScript, React, MySQL, Github
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            Projeto Oeste Orgânicos
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            2023 – Maio/2025 (em desenvolvimento)
+          </p>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2"
+          >
+            <li>
+              Desenvolvimento de sistema completo para gerenciamento de vendas
+              de produtos orgânicos
+            </li>
+            <li>Plataforma web e mobile conectando produtores e clientes</li>
+            <li>Arquitetura backend e interface administrativa</li>
+            <li>
+              Foco em escalabilidade, segurança e integração entre sistemas
+            </li>
+            <li>
+              <span class="font-medium">Tecnologias:</span> Laravel, Inertia.js,
+              React, TypeScript, JWT, TailwindCSS, MySQL, Git
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            Projetista - Eletroprev Engenharia
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">2019 – 2025</p>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2"
+          >
+            <li>Elaboração de projetos civis</li>
+            <li>Interação direta com clientes</li>
+            <li>Tomada de decisões técnicas</li>
+            <li>
+              <span class="font-medium">Ferramentas:</span> AutoCAD, Revit,
+              Excel, Word
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Educação -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-teal-500 dark:text-teal-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-4"
+        >
+          Educação
+        </h2>
+        <div class="mb-4">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            Engenharia de Software
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            2025 – Em andamento
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            Engenharia de Controle e Automação
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            2022 – 2025 (transferido para Engenharia de Software)
+          </p>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Aprofundei conhecimentos em cálculo, álgebra, física, eletrônica e
+            programação aplicada à engenharia.
+          </p>
+        </div>
+      </section>
+
+      <!-- Formação Complementar -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-teal-500 dark:text-teal-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-4"
+        >
+          Formação Complementar
+        </h2>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            Técnico em Informática - Instituto Federal
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">2018 – 2022</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+            Estudei algoritmos, estrutura de dados, banco de dados,
+            desenvolvimento web e mobile, além de análise de sistemas.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-teal-500 dark:text-teal-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-4"
+        >
+          Skills Técnicas
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700 dark:text-gray-300"
+        >
+          <span>JavaScript</span>
+          <span>TypeScript</span>
+          <span>React</span>
+          <span>Next.js</span>
+          <span>Node.js</span>
+          <span>PHP</span>
+          <span>Laravel</span>
+          <span>MySQL</span>
+          <span>TailwindCSS</span>
+          <span>Git/GitHub</span>
+          <span>Docker</span>
+          <span>REST APIs</span>
+          <span>JWT</span>
+          <span>Cloudflare</span>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section
+        class="text-center pt-6 border-t border-gray-200 dark:border-gray-700 mt-8"
+      >
+        <p class="text-gray-700 dark:text-gray-300">
+          📧 lucasjandrey5@gmail.com | 📱 (49) 99920-0885
+        </p>
+        <p class="text-sm text-gray-400 dark:text-gray-500 mt-1">
+          Última atualização: Maio 2025
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

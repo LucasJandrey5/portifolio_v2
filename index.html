@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Dev Full Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind dark mode configuration
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        font-family: "Fira Code", monospace;
+        scroll-behavior: smooth;
+
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      #typing-text {
+        font-family: monospace;
+        white-space: nowrap;
+        padding-right: 5px;
+      }
+
+      #typing-text:after {
+        content: "|";
+        color: black;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          color: black;
+        }
+        50% {
+          color: transparent;
+        }
+      }
+
+      .social-link {
+        transition: transform 0.2s;
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200"
+  >
+    <!-- Dark Mode Toggle -->
+    <button
+      onclick="toggleDarkMode()"
+      class="fixed top-20 right-4 z-50 p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+    >
+      <span class="block dark:hidden">☀️</span>
+      <span class="hidden dark:block">🌙</span>
+    </button>
+
+    <!-- Header -->
+    <header
+      class="hidden md:block fixed top-0 left-0 w-full bg-white dark:bg-gray-800 z-50 shadow-md transition-colors duration-200"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-xl font-bold text-teal-600 dark:text-teal-400">
+          Dev Full Stack
+        </h1>
+        <nav class="space-x-6 text-sm hidden md:block">
+          <a
+            href="#home"
+            class="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+            >Início</a
+          >
+          <a
+            href="#about"
+            class="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+            >Sobre</a
+          >
+          <a
+            href="#tecnologias"
+            class="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+            >Tecnologias</a
+          >
+          <a
+            href="#roadmap"
+            class="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+            >Jornada</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+            >Projetos</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+            >Contato</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="grid grid-cols-1 md:grid-cols-3 px-4 min-h-screen pb-20 md:pb-0 justify-center md:justify-between items-center bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-300"
+    >
+      <!-- Primeira coluna -->
+      <div
+        class="w-full flex flex-col items-center space-y-6 order-2 md:order-2 mx-auto"
+      >
+        <div class="flex flex-col items-center md:items-start">
+          <div
+            class="inline-block bg-orange-100 dark:bg-purple-900/30 p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
+          >
+            <p class="text-orange-600 dark:text-purple-400">👋 Saudações!</p>
+          </div>
+
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white transition-colors duration-300"
+          >
+            Lucas Jandrey
+          </h1>
+          <div
+            class="text-xl text-gray-600 dark:text-gray-300 transition-colors duration-300"
+          >
+            <div
+              id="typing-text"
+              class="text-lg sm:text-xl md:text-2xl font-mono"
+            ></div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="justify-center md:justify-start flex gap-4 mt-6">
+            <!-- LinkedIn -->
+            <a
+              href="https://linkedin.com/in/lucas-jandrey"
+              target="_blank"
+              class="social-link text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all relative group duration-300"
+              aria-label="LinkedIn"
+            >
+              <span
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 dark:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap"
+                >lucas-jandrey</span
+              >
+              <svg
+                height="36px"
+                fill="currentColor"
+                style="
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  stroke-linejoin: round;
+                  stroke-miterlimit: 2;
+                "
+                version="1.1"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"
+                />
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/LucasJandrey5"
+              target="_blank"
+              class="social-link text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all relative group duration-300"
+              aria-label="GitHub"
+            >
+              <span
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 dark:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap"
+                >LucasJandrey5</span
+              >
+              <svg fill="currentColor" height="36px" viewBox="0 0 25 25">
+                <path
+                  clip-rule="evenodd"
+                  d="M15.7481 24.9471C24.0901 24.7061 24.9111 22.9501 24.9111 12.9811C24.9111 1.98108 23.9111 0.981079 12.9111 0.981079C1.91113 0.981079 0.911133 1.98108 0.911133 12.9811C0.911133 22.9761 1.73713 24.7151 10.1391 24.9491C10.2121 24.8581 10.2391 24.7441 10.2391 24.6281C10.2391 24.3781 10.2291 21.8121 10.2241 20.9291C7.18713 21.5681 6.54613 19.5101 6.54613 19.5101C6.04913 18.2881 5.33313 17.9621 5.33313 17.9621C4.34213 17.3061 5.40813 17.3191 5.40813 17.3191C6.50413 17.3941 7.08113 18.4101 7.08113 18.4101C8.05513 20.0271 9.63713 19.5601 10.2591 19.2891C10.3581 18.6061 10.6401 18.1391 10.9521 17.8751C8.52713 17.6081 5.97813 16.7001 5.97813 12.6451C5.97813 11.4901 6.40413 10.5461 7.10213 9.80608C6.98913 9.53808 6.61513 8.46208 7.20913 7.00608C7.20913 7.00608 8.12613 6.72108 10.2121 8.09008C11.0831 7.85508 12.0171 7.73808 12.9461 7.73408C13.8731 7.73808 14.8071 7.85508 15.6801 8.09008C17.7651 6.72108 18.6801 7.00608 18.6801 7.00608C19.2761 8.46208 18.9011 9.53808 18.7881 9.80608C19.4881 10.5461 19.9111 11.4901 19.9111 12.6451C19.9111 16.7101 17.3581 17.6051 14.9251 17.8661C15.3171 18.1931 15.6661 18.8391 15.6661 19.8261C15.6661 20.7721 15.6601 22.4451 15.6561 23.5541C15.6541 24.1031 15.6531 24.5131 15.6531 24.6281C15.6531 24.7371 15.6821 24.8521 15.7481 24.9471V24.9471Z"
+                />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://instagram.com/lucas_jandrey_"
+              target="_blank"
+              class="social-link text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all relative group duration-300"
+              aria-label="Instagram"
+            >
+              <span
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 dark:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap"
+                >@lucas_jandrey_</span
+              >
+              <svg
+                height="36px"
+                style="
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  stroke-linejoin: round;
+                  stroke-miterlimit: 2;
+                "
+                viewBox="0 0 512 512"
+              >
+                <defs>
+                  <linearGradient id="igGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#8e44ad" />
+                    <stop offset="50%" stop-color="#e84393" />
+                    <stop offset="100%" stop-color="#fd79a8" />
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="currentColor"
+                  class="group-hover:fill-[url(#igGradient)] text-gray-600 dark:text-gray-400"
+                  d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-193.446,81c-47.527,0 -53.487,0.201 -72.152,1.053c-18.627,0.85 -31.348,3.808 -42.48,8.135c-11.508,4.472 -21.267,10.456 -30.996,20.184c-9.729,9.729 -15.713,19.489 -20.185,30.996c-4.326,11.132 -7.284,23.853 -8.135,42.48c-0.851,18.665 -1.052,24.625 -1.052,72.152c0,47.527 0.201,53.487 1.052,72.152c0.851,18.627 3.809,31.348 8.135,42.48c4.472,11.507 10.456,21.267 20.185,30.996c9.729,9.729 19.488,15.713 30.996,20.185c11.132,4.326 23.853,7.284 42.48,8.134c18.665,0.852 24.625,1.053 72.152,1.053c47.527,0 53.487,-0.201 72.152,-1.053c18.627,-0.85 31.348,-3.808 42.48,-8.134c11.507,-4.472 21.267,-10.456 30.996,-20.185c9.729,-9.729 15.713,-19.489 20.185,-30.996c4.326,-11.132 7.284,-23.853 8.134,-42.48c0.852,-18.665 1.053,-24.625 1.053,-72.152c0,-47.527 -0.201,-53.487 -1.053,-72.152c-0.85,-18.627 -3.808,-31.348 -8.134,-42.48c-4.472,-11.507 -10.456,-21.267 -20.185,-30.996c-9.729,-9.728 -19.489,-15.712 -30.996,-20.184c-11.132,-4.327 -23.853,-7.285 -42.48,-8.135c-18.665,-0.852 -24.625,-1.053 -72.152,-1.053Zm0,31.532c46.727,0 52.262,0.178 70.715,1.02c17.062,0.779 26.328,3.63 32.495,6.025c8.169,3.175 13.998,6.968 20.122,13.091c6.124,6.124 9.916,11.954 13.091,20.122c2.396,6.167 5.247,15.433 6.025,32.495c0.842,18.453 1.021,23.988 1.021,70.715c0,46.727 -0.179,52.262 -1.021,70.715c-0.778,17.062 -3.629,26.328 -6.025,32.495c-3.175,8.169 -6.967,13.998 -13.091,20.122c-6.124,6.124 -11.953,9.916 -20.122,13.091c-6.167,2.396 -15.433,5.247 -32.495,6.025c-18.45,0.842 -23.985,1.021 -70.715,1.021c-46.73,0 -52.264,-0.179 -70.715,-1.021c-17.062,-0.778 -26.328,-3.629 -32.495,-6.025c-8.169,-3.175 -13.998,-6.967 -20.122,-13.091c-6.124,-6.124 -9.917,-11.953 -13.091,-20.122c-2.396,-6.167 -5.247,-15.433 -6.026,-32.495c-0.842,-18.453 -1.02,-23.988 -1.02,-70.715c0,-46.727 0.178,-52.262 1.02,-70.715c0.779,-17.062 3.63,-26.328 6.026,-32.495c3.174,-8.168 6.967,-13.998 13.091,-20.122c6.124,-6.123 11.953,-9.916 20.122,-13.091c6.167,-2.395 15.433,-5.246 32.495,-6.025c18.453,-0.842 23.988,-1.02 70.715,-1.02Zm0,53.603c-49.631,0 -89.865,40.234 -89.865,89.865c0,49.631 40.234,89.865 89.865,89.865c49.631,0 89.865,-40.234 89.865,-89.865c0,-49.631 -40.234,-89.865 -89.865,-89.865Zm0,148.198c-32.217,0 -58.333,-26.116 -58.333,-58.333c0,-32.217 26.116,-58.333 58.333,-58.333c32.217,0 58.333,26.116 58.333,58.333c0,32.217 -26.116,58.333 -58.333,58.333Zm114.416,-151.748c0,11.598 -9.403,20.999 -21.001,20.999c-11.597,0 -20.999,-9.401 -20.999,-20.999c0,-11.598 9.402,-21 20.999,-21c11.598,0 21.001,9.402 21.001,21Z"
+                />
+              </svg>
+            </a>
+
+            <!-- YouTube - Projeto futuro -->
+            <!-- <a
+              href="https://www.youtube.com/@lucasjandreydev"
+              target="_blank"
+              class="social-link text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300 relative group"
+              aria-label="YouTube"
+            >
+              <span
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 dark:bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap"
+                >Projeto futuro</span
+              >
+              <svg
+                height="36px"
+                style="
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  stroke-linejoin: round;
+                  stroke-miterlimit: 2;
+                "
+                fill="currentColor"
+                version="1.1"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-20.967,175.63c-4.139,-15.489 -16.337,-27.687 -31.826,-31.826c-28.078,-7.524 -140.653,-7.524 -140.653,-7.524c0,0 -112.575,0 -140.653,7.524c-15.486,4.139 -27.686,16.337 -31.826,31.826c-7.521,28.075 -7.521,86.652 -7.521,86.652c0,0 0,58.576 7.521,86.648c4.14,15.489 16.34,27.69 31.826,31.829c28.078,7.521 140.653,7.521 140.653,7.521c0,0 112.575,0 140.653,-7.521c15.489,-4.139 27.687,-16.34 31.826,-31.829c7.521,-28.072 7.521,-86.648 7.521,-86.648c0,0 0,-58.577 -7.521,-86.652Zm-208.481,140.653l0,-108.002l93.53,54.001l-93.53,54.001Z"
+                />
+              </svg>
+            </a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna central (imagem) -->
+      <div
+        class="relative order-1 md:order-2 px-4 mt-16 md:mt-0 mb-16 md:mb-0 max-w-2xl mx-auto"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-orange-500/30 to--500/30 dark:from-purple-600/20 dark:to-blue-600/20 rounded-full blur-2xl transform -rotate-6 scale-110"
+        ></div>
+
+        <div class="relative w-full aspect-square rounded-full overflow-hidden">
+          <img
+            src="./assets/images/lucas_light.png"
+            alt="Lucas Jandrey"
+            class="w-full h-full object-cover dark:hidden"
+          />
+          <img
+            src="./assets/images/lucas_dark.png"
+            alt="Lucas Jandrey"
+            class="w-full h-full object-cover hidden dark:block"
+          />
+        </div>
+      </div>
+
+      <!-- Botões -->
+      <div
+        class="flex flex-col items-center justify-center gap-4 mt-8 lg:mt-0 order-3 px-4"
+      >
+        <div class="flex">
+          <a
+            href="/seu-curriculo.pdf"
+            download
+            class="flex items-center bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full gap-2 backdrop-blur-sm border border-gray-300 dark:border-white/10 transition-all duration-300 hover:scale-105"
+          >
+            <span>Baixar CV</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="flex">
+          <a
+            href="https://wa.me/+5549999200885"
+            target="_blank"
+            class="hero-button bg-orange-500/80 dark:bg-purple-600/80 hover:bg-orange-600 dark:hover:bg-purple-500 text-white px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+          >
+            <span>Vamos conversar!</span>
+            <svg
+              height="24px"
+              id="Layer_1"
+              version="1.1"
+              viewBox="0 0 56.693 56.693"
+              fill="currentColor"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M46.3802,10.7138c-4.6512-4.6565-10.8365-7.222-17.4266-7.2247c-13.5785,0-24.63,11.0506-24.6353,24.6333   c-0.0019,4.342,1.1325,8.58,3.2884,12.3159l-3.495,12.7657l13.0595-3.4257c3.5982,1.9626,7.6495,2.9971,11.7726,2.9985h0.01   c0.0008,0-0.0006,0,0.0002,0c13.5771,0,24.6293-11.0517,24.635-24.6347C53.5914,21.5595,51.0313,15.3701,46.3802,10.7138z    M28.9537,48.6163h-0.0083c-3.674-0.0014-7.2777-0.9886-10.4215-2.8541l-0.7476-0.4437l-7.7497,2.0328l2.0686-7.5558   l-0.4869-0.7748c-2.0496-3.26-3.1321-7.028-3.1305-10.8969c0.0044-11.2894,9.19-20.474,20.4842-20.474   c5.469,0.0017,10.6101,2.1344,14.476,6.0047c3.8658,3.8703,5.9936,9.0148,5.9914,14.4859   C49.4248,39.4307,40.2395,48.6163,28.9537,48.6163z"
+                />
+                <path
+                  class="st0"
+                  d="M40.1851,33.281c-0.6155-0.3081-3.6419-1.797-4.2061-2.0026c-0.5642-0.2054-0.9746-0.3081-1.3849,0.3081   c-0.4103,0.6161-1.59,2.0027-1.9491,2.4136c-0.359,0.4106-0.7182,0.4623-1.3336,0.1539c-0.6155-0.3081-2.5989-0.958-4.95-3.0551   c-1.83-1.6323-3.0653-3.6479-3.4245-4.2643c-0.359-0.6161-0.0382-0.9492,0.27-1.2562c0.2769-0.2759,0.6156-0.7189,0.9234-1.0784   c0.3077-0.3593,0.4103-0.6163,0.6155-1.0268c0.2052-0.4109,0.1027-0.7704-0.0513-1.0784   c-0.1539-0.3081-1.3849-3.3379-1.8978-4.5706c-0.4998-1.2001-1.0072-1.0375-1.3851-1.0566   c-0.3585-0.0179-0.7694-0.0216-1.1797-0.0216s-1.0773,0.1541-1.6414,0.7702c-0.5642,0.6163-2.1545,2.1056-2.1545,5.1351   c0,3.0299,2.2057,5.9569,2.5135,6.3676c0.3077,0.411,4.3405,6.6282,10.5153,9.2945c1.4686,0.6343,2.6152,1.013,3.5091,1.2966   c1.4746,0.4686,2.8165,0.4024,3.8771,0.2439c1.1827-0.1767,3.6419-1.489,4.1548-2.9267c0.513-1.438,0.513-2.6706,0.359-2.9272   C41.211,33.7433,40.8006,33.5892,40.1851,33.281z"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section
+      id="about"
+      class="py-20 bg-gray-100 dark:bg-gray-800 px-6 transition-colors duration-200"
+      data-aos="fade-right"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+          Sobre Mim
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+          Sou desenvolvedor full stack com foco em entregar soluções que
+          funcionam na prática. Já quebrei muita coisa pra aprender como
+          construir direito. Trabalho com TypeScript, React, Node.js, PHP e
+          Laravel, mas o que me move mesmo é resolver problema de verdade — seja
+          com código, arquitetura ou ideia fora da caixa. Atualmente curso
+          Engenharia de Software e tô sempre atrás do próximo desafio técnico.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section
+      id="tecnologias"
+      class="w-full bg-gray-100 dark:bg-gray-950 py-16 md:py-20 2xl:py-24"
+    >
+      <div
+        class="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8"
+      >
+        <div class="flex flex-col items-center gap-4">
+          <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8"
+          >
+            Tecnologias 🚀
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-6 lg:gap-y-12 place-items-center"
+        >
+          <!-- JavaScript -->
+          <div class="flex flex-col items-center gap-2">
+            <a
+              target="_blank"
+              class=""
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              ><img
+                alt="Javascript"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Javascript</p>
+          </div>
+
+          <!-- TypeScript -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://www.typescriptlang.org/"
+              ><img
+                alt="Typescript"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Typescript</p>
+          </div>
+
+          <!-- React -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://react.dev/"
+              ><img
+                alt="React"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">React</p>
+          </div>
+
+          <!-- PHP -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://reactnative.dev/"
+              ><img
+                alt="PHP"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">PHP</p>
+          </div>
+
+          <!-- Laravel -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://reactnative.dev/"
+              ><img
+                alt="Laravel"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Laravel</p>
+          </div>
+
+          <!-- Next.js -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://nextjs.org/"
+              ><img
+                alt="Next.js"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Next.js</p>
+          </div>
+
+          <!-- Node.js -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://nodejs.org/en"
+              ><img
+                alt="Node.js"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Node.js</p>
+          </div>
+
+          <!-- MySQL -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://www.mysql.com/"
+              ><img
+                alt="MySQL"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">MySQL</p>
+          </div>
+
+          <!-- TailwindCSS -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://tailwindcss.com/"
+              ><img
+                alt="Tailwindcss"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Tailwindcss</p>
+          </div>
+
+          <!-- Cloudflare -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://www.cloudflare.com/"
+              ><img
+                alt="Cloudflare"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Cloudflare</p>
+          </div>
+
+          <!-- Git -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://git-scm.com/"
+              ><img
+                alt="Git"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Git</p>
+          </div>
+
+          <!-- Docker -->
+          <div class="flex flex-col items-center gap-2">
+            <a target="_blank" class="" href="https://www.docker.com/"
+              ><img
+                alt="Docker"
+                loading="lazy"
+                width="64"
+                height="64"
+                decoding="async"
+                data-nimg="1"
+                class="transition-transform duration-300 md:hover:scale-110"
+                style="color: transparent"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            /></a>
+            <p class="text-normal text-base md:text-lg">Docker</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section
+      id="roadmap"
+      class="py-10 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-5 transition-colors duration-200"
+    >
+      <h2
+        class="text-3xl font-bold text-teal-600 dark:text-teal-400 text-center mb-8"
+      >
+        Minha Jornada 🚀
+      </h2>
+
+      <div class="max-w-3xl mx-auto">
+        <ul class="border-l-2 border-gray-300 dark:border-gray-700">
+          <!-- Etapa 1 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">2017 — Desenvolvimento de Jogos</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Iniciei minha jornada na programação aos 14 anos criando jogos em
+              C# com Unity. Desenvolvi a base da lógica de programação e comecei
+              a me interessar por desenvolvimento web.
+            </p>
+          </li>
+
+          <!-- Etapa 2 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">
+              2018 — Entrei no Instituto Federal
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Entrei no curso técnico integrado em Informática, onde aprendi
+              algoritmos, estrutura de dados, banco de dados, desenvolvimento
+              web e mobile, além de análise de sistemas.
+            </p>
+          </li>
+
+          <!-- Etapa 3 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-yellow-400 dark:bg-yellow-500 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">Entre meio de 2019 e 2020</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Apesar de não estar focado em programação, continuei estudando por
+              conta própria com TypeScript e PHP, criando projetos para
+              consolidar o conhecimento.
+            </p>
+          </li>
+
+          <!-- Etapa 4 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">
+              2022 — Engenharia de Controle e Automação
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Iniciei a graduação em Engenharia de Controle e Automação, onde
+              aprofundei conhecimentos em cálculo, álgebra, física, eletrônica e
+              programação aplicada à engenharia.
+            </p>
+          </li>
+
+          <!-- Etapa 5 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-pink-500 dark:bg-pink-600 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">Eletroprev Engenharia</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Atuei como projetista de projetos civis, lidando diretamente com
+              clientes e tomando decisões técnicas. Essa experiência me deu
+              visão de negócio e responsabilidade profissional.
+            </p>
+          </li>
+
+          <!-- Etapa 6 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">2023 — Oeste Orgânicos</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              No inicio entrei para dar suporte ao desenvolvimento, mas acabei
+              me envolvendo com o projeto e acabei me dedicando a ele. Passamos
+              por diversas reformulações de requisitos e hoje temos uma
+              plataforma web e mobile. Nossa espectativa de lançamento é para
+              maio/2025.
+              <a
+                href="#oeste-organicos"
+                class="text-xs text-teal-600 dark:text-teal-400 hover:underline"
+              >
+                Confira abaixo o projeto.
+              </a>
+            </p>
+          </li>
+
+          <!-- Etapa 7 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-green-500 dark:bg-green-600 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">
+              2025 — Mudança para Engenharia de Software
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Decidi focar totalmente em desenvolvimento de software, migrando
+              de Engenharia de Controle e Automação para Engenharia de Software.
+            </p>
+          </li>
+
+          <!-- Etapa 8 -->
+          <li class="mb-8 pl-6 relative">
+            <span
+              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+            ></span>
+            <h3 class="font-bold text-lg">2025 — Five Tech</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Atuo como desenvolvedor fullstack em uma startup que está criando
+              um sistema de gestão de licitações. Participo do desenvolvimento
+              de novas features, arquitetura de banco de dados, testes e debug
+              de sistemas críticos.
+            </p>
+
+            <a
+              href="#experiences"
+              class="text-xs text-teal-600 dark:text-teal-400 hover:underline"
+            >
+              Confira abaixo as tecnologias que utilizo.
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section
+      id="projects"
+      class="py-20 px-6 bg-gray-200 dark:bg-gray-900 transition-colors duration-200"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h3
+          class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+        >
+          Projetos em Destaque
+        </h3>
+        <div class="flex flex-col gap-8">
+          <!-- Oeste Orgânicos -->
+          <div
+            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200"
+            data-aos="zoom-in"
+          >
+            <div
+              class="flex flex-col items-center justify-center mx-auto p-5 w-1/2"
+            >
+              <img
+                src="./assets/images/oeste_organicos.png"
+                alt="Oeste Orgânicos"
+                class="w-full text-center mx-auto"
+              />
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <h3
+                class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-1"
+              >
+                Oeste Orgânicos
+              </h3>
+              <p class="text-sm text-gray-400 italic mb-4">
+                Em desenvolvimento
+              </p>
+
+              <p
+                class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4"
+              >
+                Sistema completo para gerenciamento de vendas de produtos
+                orgânicos, conectando produtores e clientes por meio de uma
+                plataforma web e mobile. Desenvolvi desde a arquitetura backend
+                até a interface administrativa, com foco em escalabilidade,
+                segurança e integração entre sistemas.
+              </p>
+
+              <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+                <li class="text-gray-600 dark:text-gray-300">
+                  <span
+                    class="font-semibold text-emerald-600 dark:text-emerald-400"
+                    >Tecnologias:</span
+                  >
+                  Laravel, Inertia.js, React, TypeScript, JWT, Mailtrap,
+                  TailwindCSS, MySQL, Git
+                </li>
+                <li class="text-gray-600 dark:text-gray-300">
+                  <span
+                    class="font-semibold text-emerald-600 dark:text-emerald-400"
+                    >Auth:</span
+                  >
+                  JWT com access/refresh tokens + roles via Laravel Shield
+                </li>
+                <li class="text-gray-600 dark:text-gray-300">
+                  <span
+                    class="font-semibold text-emerald-600 dark:text-emerald-400"
+                    >Gestão:</span
+                  >
+                  produtos com múltiplas unidades e pedidos agrupados
+                </li>
+                <li class="text-gray-600 dark:text-gray-300">
+                  <span
+                    class="font-semibold text-emerald-600 dark:text-emerald-400"
+                    >Integração:</span
+                  >
+                  API REST entre app e web com dados sincronizados
+                </li>
+                <li class="text-gray-600 dark:text-gray-300">
+                  <span
+                    class="font-semibold text-emerald-600 dark:text-emerald-400"
+                    >Push:</span
+                  >
+                  Notificações e lembretes no mobile (em desenvolvimento)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiências -->
+    <section
+      id="experiences"
+      class="py-20 px-6 bg-white dark:bg-gray-950 transition-colors duration-200"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h3
+          class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+        >
+          Experiências
+        </h3>
+        <div class="flex flex-col gap-8">
+          <!-- Five Tech -->
+          <div
+            id="five-tech"
+            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200"
+            data-aos="zoom-in"
+          >
+            <div
+              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <h3
+                class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-1"
+              >
+                Desenvolvedor Fullstack
+              </h3>
+              <p class="text-sm text-gray-400 italic mb-4">
+                janeiro/2025 - atual
+              </p>
+              <p
+                class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4"
+              >
+                Participo da criação de uma plataforma web para gestão de
+                processos de licitações. Sou responsável por implementar
+                funcionalidades no backend e frontend, além de contribuir
+                ativamente nas decisões técnicas sobre arquitetura de software e
+                modelagem de banco de dados.
+                <br />
+                <br />
+                <strong>Stack:</strong> Laravel, FilamentPHP, MingleJs,
+                TypeScript, React, MySQL, Github.
+              </p>
+            </div>
+          </div>
+          <!-- Eletroprev Engenharia -->
+          <div
+            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200"
+            data-aos="zoom-in"
+          >
+            <div
+              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <h3
+                class="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-1"
+              >
+                Projetista
+              </h3>
+              <p class="text-sm text-gray-400 italic mb-4">2019 - 2025</p>
+              <p
+                class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4"
+              >
+                Atuei como projetista de projetos civis, lidando diretamente com
+                clientes e tomando decisões técnicas. Essa experiência me deu
+                visão de negócio e responsabilidade profissional.
+
+                <br />
+                <br />
+                <strong>Programas:</strong> AutoCAD, Revit, Excel, Word, e
+                outros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section
+      id="contact"
+      class="py-20 px-6 bg-white dark:bg-gray-950 transition-colors duration-200"
+      data-aos="fade-left"
+    >
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+          Vamos conversar?
+        </h3>
+        <p
+          class="text-gray-700 dark:text-gray-300 text-lg mb-8 leading-relaxed"
+        >
+          Qual o próximo passo? Sinta-se à vontade para entrar em contato comigo
+          se você está procurando um desenvolvedor, tem uma pergunta, ou
+          simplesmente quer se conectar.
+        </p>
+
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-8 mt-10"
+        >
+          <!-- Email -->
+          <div
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
+          >
+            <div class="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-teal-600 dark:text-teal-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                />
+                <path
+                  d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Email
+            </h4>
+            <a
+              href="mailto:lucasjandrey5@gmail.com"
+              class="text-teal-600 dark:text-teal-400 hover:underline break-all"
+            >
+              lucasjandrey5@gmail.com
+            </a>
+          </div>
+
+          <!-- Telefone -->
+          <div
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
+          >
+            <div class="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-teal-600 dark:text-teal-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Telefone
+            </h4>
+            <a
+              href="tel:+5549999200885"
+              class="text-teal-600 dark:text-teal-400 hover:underline"
+            >
+              +55 (49) 99920-0885
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-100 dark:bg-gray-900 py-6 text-center text-sm text-gray-600 dark:text-gray-400 transition-colors duration-200"
+    >
+      &copy; 2025 | Design and Code with ❤️️ by Lucas Jandrey.
+    </footer>
+
+    <script>
+      AOS.init();
+
+      // Dark mode toggle function
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+        // Optional: Save preference to localStorage
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("darkMode", isDark);
+      }
+
+      // Check for saved dark mode preference
+      if (
+        localStorage.getItem("darkMode") === "true" ||
+        (!localStorage.getItem("darkMode") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+
+      const phrases = [
+        "Sou desenvolvedor fullstack.",
+        "Futuro engenheiro de software.",
+        "Amo arquitetura de software.",
+        "Apaixonado por tecnologia.",
+        "1% melhor a cada dia.",
+      ];
+
+      let currentPhraseIndex = 0;
+      let currentCharIndex = 0;
+      let isDeleting = false;
+      const typingSpeed = 50;
+      const deletingSpeed = 25;
+      const pauseEnd = 2000;
+
+      function typeText() {
+        const textElement = document.getElementById("typing-text");
+        const currentPhrase = phrases[currentPhraseIndex];
+
+        let delay;
+
+        if (isDeleting) {
+          currentCharIndex--;
+          textElement.textContent = currentPhrase.substring(
+            0,
+            currentCharIndex
+          );
+          delay = deletingSpeed;
+
+          if (currentCharIndex === 0) {
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+          }
+        } else {
+          currentCharIndex++;
+          textElement.textContent = currentPhrase.substring(
+            0,
+            currentCharIndex
+          );
+          delay = typingSpeed;
+
+          if (currentCharIndex === currentPhrase.length) {
+            isDeleting = true;
+            delay = pauseEnd;
+          }
+        }
+
+        setTimeout(typeText, delay);
+      }
+
+      window.addEventListener("load", typeText);
+    </script>
+  </body>
+</html>
