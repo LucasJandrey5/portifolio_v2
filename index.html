@@ -72,100 +72,7 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
-    <style>
-      html,
-      body {
-        font-family: 'Fira Code', monospace;
-        scroll-behavior: smooth;
-        max-width: 100%;
-        overflow-x: hidden;
-      }
-
-      #typing-text {
-        font-family: monospace;
-        white-space: nowrap;
-        padding-right: 5px;
-      }
-
-      #typing-text:after {
-        content: '|';
-        animation: blink 1s infinite;
-      }
-
-      @keyframes blink {
-        0%,
-        100% {
-          color: black;
-        }
-        50% {
-          color: transparent;
-        }
-      }
-
-      .social-link {
-        transition: transform 0.2s;
-      }
-
-      .social-link:hover {
-        transform: translateY(-3px);
-      }
-
-      /* Smooth scroll behavior */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Focus styles for better accessibility */
-      *:focus {
-        outline: 2px solid #0ea5e9;
-        outline-offset: 2px;
-      }
-
-      /* Loading animation */
-      .loading {
-        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-
-      .dark ::-webkit-scrollbar-track {
-        background: #1f2937;
-      }
-
-      .dark ::-webkit-scrollbar-thumb {
-        background: #4b5563;
-      }
-
-      .dark ::-webkit-scrollbar-thumb:hover {
-        background: #6b7280;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body
     class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200"
@@ -420,7 +327,14 @@
             </svg>
           </a>
         </div>
-        <div class="flex">
+        <button class="copy-btn group" onclick="copyEmail(this)">
+          <span>lucasjandrey5@gmail.com</span>
+          <div class="check">Copiado ✔</div>
+          <span class="absolute top-full mt-5">Clique para copiar!</span>
+        </button>
+
+
+        <!-- <div class="flex">
           <a
             target="_blank"
             class="hero-button bg-orange-500/80 dark:bg-purple-600/80 hover:bg-orange-600 dark:hover:bg-purple-500 text-white px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm transition-all duration-300 hover:scale-105"
@@ -449,7 +363,7 @@
               />
             </svg>
           </a>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -1174,7 +1088,6 @@
               lucasjandrey5@gmail.com
             </a>
           </div>
-
         </div>
       </div>
     </section>
@@ -1208,98 +1121,6 @@
       &copy; 2025 | Design and Code with ❤️️ by Lucas Jandrey.
     </footer>
 
-    <script>
-      AOS.init();
-
-      // Dark mode toggle function
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle('dark');
-        // Optional: Save preference to localStorage
-        const isDark = document.documentElement.classList.contains('dark');
-        localStorage.setItem('darkMode', isDark);
-      }
-
-      // Check for saved dark mode preference
-      if (
-        localStorage.getItem('darkMode') === 'true' ||
-        (!localStorage.getItem('darkMode') &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      }
-
-      // Scroll to top function
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      }
-
-      // Show/hide scroll to top button
-      window.addEventListener('scroll', function () {
-        const scrollToTopButton = document.querySelector("button[onclick='scrollToTop()']");
-        if (window.scrollY > 300) {
-          scrollToTopButton.classList.remove('opacity-0');
-          scrollToTopButton.classList.add('opacity-100');
-        } else {
-          scrollToTopButton.classList.remove('opacity-100');
-          scrollToTopButton.classList.add('opacity-0');
-        }
-      });
-
-      const phrases = [
-        'Sou desenvolvedor fullstack.',
-        'Futuro engenheiro de software.',
-        'Amo arquitetura de software.',
-        'Apaixonado por tecnologia.',
-        '1% melhor a cada dia.',
-      ];
-
-      let currentPhraseIndex = 0;
-      let currentCharIndex = 0;
-      let isDeleting = false;
-      const typingSpeed = 50;
-      const deletingSpeed = 25;
-      const pauseEnd = 2000;
-
-      function typeText() {
-        const textElement = document.getElementById('typing-text');
-        const currentPhrase = phrases[currentPhraseIndex];
-
-        let delay;
-
-        if (isDeleting) {
-          currentCharIndex--;
-          textElement.textContent = currentPhrase.substring(0, currentCharIndex);
-          delay = deletingSpeed;
-
-          if (currentCharIndex === 0) {
-            isDeleting = false;
-            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-          }
-        } else {
-          currentCharIndex++;
-          textElement.textContent = currentPhrase.substring(0, currentCharIndex);
-          delay = typingSpeed;
-
-          if (currentCharIndex === currentPhrase.length) {
-            isDeleting = true;
-            delay = pauseEnd;
-          }
-        }
-
-        setTimeout(typeText, delay);
-      }
-
-      const encoded = "NTU5OTk5OTk5OTk5"; // 559999999999 em base64
-      const numero = atob(encoded);
-      const a = document.createElement("a");
-      a.href = `https://wa.me/${numero}`;
-      a.innerText = "Fale comigo";
-      document.getElementById("zap").appendChild(a);
-      
-      window.addEventListener('load', typeText);
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
