@@ -327,11 +327,14 @@
             </svg>
           </a>
         </div>
-        <button class="copy-btn group" onclick="copyEmail(this)">
-          <span>lucasjandrey5@gmail.com</span>
-          <div class="check">Copiado ✔</div>
-          <span class="absolute top-full mt-5">Clique para copiar!</span>
-        </button>
+        <div class="relative group">
+          <button class="copy-btn group relative" onclick="copyEmail(this)">
+            <span>lucasjandrey5@gmail.com</span>
+            <div class="check hidden group-hover:block absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-green-500 text-white text-xs px-2 py-1 rounded">Copiado ✔</div>
+          </button>
+          <span class="flex absolute text-[10px] mt-2 top-full mt-1 bg-gray-300 px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 left-1/2 -translate-x-1/2">Clique para copiar!</span>
+        </div>
+       
 
 
         <!-- <div class="flex">
