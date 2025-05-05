@@ -92,3 +92,17 @@ function copyEmail(button) {
     }, 2000);
   });
 }
+
+function copyCardEmail(button) {
+  const email = 'lucasjandrey5@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    const span = button.querySelector('.copiedEmail');
+    span.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+    span.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      span.classList.remove('opacity-100', 'translate-y-0');
+      span.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+    }, 2000);
+  });
+}

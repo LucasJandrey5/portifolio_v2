@@ -130,7 +130,7 @@
     <!-- Hero -->
     <section
       id="home"
-      class="grid grid-cols-1 md:grid-cols-3 px-4 min-h-screen pb-20 md:pb-0 justify-center md:justify-between items-center bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-300"
+      class="grid grid-cols-1 md:grid-cols-3 px-4 min-h-[100dvh] pb-20 md:pb-0 justify-center md:justify-between items-center bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-300"
     >
       <h1 class="sr-only">Lucas Jandrey | Desenvolvedor Full Stack</h1>
       <!-- Primeira coluna -->
@@ -335,7 +335,25 @@
          <!-- <span class="flex absolute text-[10px] mt-2 top-full mt-1 bg-gray-300 px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 left-1/2 -translate-x-1/2 dark:bg-gray-700 dark:text-gray-300">Clique para copiar!</span> -->
         </div>
        
+        <div class="flex">
+          <a
+            href="/contatos.html"
+            class="flex items-center bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full gap-2 backdrop-blur-sm border border-gray-300 dark:border-white/10 transition-all duration-300 hover:scale-105"
+          >
+            <svg
+            height="24px"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1l-2.2 2.22z"
+            />
+          </svg>
+            <span>Contatos</span>
 
+          </a>
+        </div>
 
         <!-- <div class="flex">
           <a
@@ -385,7 +403,7 @@
           <br />
           Adoro tanto construir quanto desmontar coisas. Sou motivado por projetos desafiadores, com
           pesquisa autodirigida e resolução dinâmica de problemas. Minha verdadeira paixão é criar
-          soluções que funcionam na prática, com código limpo e arquitetura robusta que de orgulho
+          soluções que funcionam na prática, com código limpo e arquitetura robusta que dê orgulho
           de mostrar.
         </p>
       </div>
@@ -776,7 +794,7 @@
             <span
               class="absolute -left-[7px] top-[5px] bg-yellow-400 dark:bg-yellow-500 w-3 h-3 rounded-full"
             ></span>
-            <h3 class="font-bold text-lg">Entre meio de 2019 e 2020</h3>
+            <h3 class="font-bold text-lg">Entre meio de 2019 e 2024</h3>
             <p class="text-gray-700 dark:text-gray-300">
               Apesar de não estar focado em programação, continuei estudando por conta própria com
               TypeScript e PHP, criando projetos para consolidar o conhecimento.
@@ -821,7 +839,7 @@
               e hoje temos uma plataforma web e mobile. Nossa espectativa de lançamento é para
               maio/2025.
               <a
-                href="#oeste-organicos"
+                href="#projects"
                 class="text-xs text-teal-600 dark:text-teal-400 hover:underline"
               >
                 Confira abaixo o projeto.
@@ -1084,13 +1102,40 @@
               </svg>
             </div>
             <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email</h4>
-            <a
-              href="mailto:lucasjandrey5@gmail.com"
-              class="text-teal-600 dark:text-teal-400 hover:underline break-all"
+            <button
+              onclick="copyCardEmail(this)"
+              class="relative text-teal-600 dark:text-teal-400 hover:underline break-all"
             >
-              lucasjandrey5@gmail.com
-            </a>
+              <div class="flex items-center gap-2">
+                lucasjandrey5@gmail.com
+                <span
+                  class="copiedEmail absolute left-1/2 -translate-x-1/2 top-8 bg-gray-800 px-3 rounded-md text-xs text-white dark:bg-gray-700 dark:text-gray-300 shadow-lg z-50
+                  opacity-0 pointer-events-none translate-y-2 transition-all duration-300"
+                >
+                  copiado!
+                </span>
+              </div>
+            </button>
           </div>
+
+          <a 
+          href="contatos.html"
+          class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto transform hover:-translate-y-1"
+        >
+          <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-full mb-4">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              class="h-8 w-8 text-purple-600 dark:text-purple-400" 
+              viewBox="0 0 20 20" 
+              fill="currentColor"
+            >
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Redes sociais</h4>
+          <span class="text-purple-600 dark:text-purple-400 hover:underline">Ver todos os contatos</span>
+        </a>
         </div>
       </div>
     </section>
