@@ -364,29 +364,42 @@
       class="py-20 bg-gray-100 dark:bg-gray-800 px-6 transition-colors duration-200"
       data-aos="fade-right"
     >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Sobre Mim</h2>
-        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-          Sou desenvolvedor full stack, estudante de engenharia de software, solucionador de
-          problemas e eterno aprendiz.
-          <br />
-          <br />
-          Adoro tanto construir quanto desmontar coisas. Sou motivado por projetos desafiadores, com
-          pesquisa autodirigida e resolução dinâmica de problemas. Minha verdadeira paixão é criar
-          soluções que funcionam na prática, com código limpo e arquitetura robusta que dê orgulho
-          de mostrar.
-        </p>
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white relative">
+          <span class="inline-block relative">
+            Sobre Mim
+            <span class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-purple-500"></span>
+          </span>
+        </h2>
+        <div class="bg-white/80 dark:bg-gray-800/60 p-8 rounded-lg shadow-sm backdrop-blur-sm border border-gray-200 dark:border-gray-700">
+          <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            Sou <strong class="text-teal-600 dark:text-teal-400">desenvolvedor full stack</strong>, estudante de <strong class="text-teal-600 dark:text-teal-400">engenharia de software</strong>, <strong class="text-teal-600 dark:text-teal-400">solucionador de problemas</strong> e eterno aprendiz.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-4">
+            Adoro tanto <strong class="text-teal-600 dark:text-teal-400">construir</strong> quanto desmontar coisas. Sou motivado por <strong class="text-teal-600 dark:text-teal-400">projetos desafiadores</strong>, com pesquisa autodirigida e <strong class="text-teal-600 dark:text-teal-400">resolução dinâmica de problemas</strong>. Minha verdadeira paixão é criar <strong class="text-teal-600 dark:text-teal-400">soluções práticas</strong>, com <strong class="text-teal-600 dark:text-teal-400">código limpo</strong> e <strong class="text-teal-600 dark:text-teal-400">arquitetura robusta</strong> que dê orgulho de mostrar.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Tecnologias -->
-    <section id="tecnologias" class="w-full bg-gray-100 dark:bg-gray-950 py-16 md:py-20 2xl:py-24">
-      <div class="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
+    <section id="tecnologias" class="relative w-full py-16 md:py-20 2xl:py-24">
+      <!-- Top wave divider -->
+      <div class="absolute top-0 left-0 w-full overflow-hidden leading-0 transform rotate-180 z-10">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" class="text-gray-100 dark:text-gray-800 relative block h-12 w-full">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-current"></path>
+        </svg>
+      </div>
+      
+      <!-- Gradient background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/90 via-purple-500/90 to-pink-500/90 dark:from-indigo-700/90 dark:via-purple-800/90 dark:to-pink-700/90 opacity-80 dark:opacity-90 z-0"></div>
+      
+      <div class="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8 py-16 z-20">
         <div class="flex flex-col items-center gap-4">
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
+          <h2 class="text-3xl font-bold text-white text-center mb-8 drop-shadow-md">
             Tecnologias 🚀
           </h2>
-          <p class="text-gray-600 dark:text-gray-400 text-center max-w-2xl">
+          <p class="text-white/90 text-center max-w-2xl backdrop-blur-sm px-6 py-2 rounded-full border border-white/20 shadow-lg">
             Tecnologias que utilizo no meu dia a dia.
           </p>
         </div>
@@ -400,7 +413,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               aria-label="JavaScript"
             >
@@ -417,7 +430,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Javascript
             </p>
@@ -427,7 +440,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://www.typescriptlang.org/"
               aria-label="TypeScript"
             >
@@ -444,7 +457,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Typescript
             </p>
@@ -454,7 +467,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://react.dev/"
               aria-label="React"
             >
@@ -471,7 +484,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               React
             </p>
@@ -481,7 +494,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://www.php.net/"
               aria-label="PHP"
             >
@@ -498,7 +511,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               PHP
             </p>
@@ -508,7 +521,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://laravel.com/"
               aria-label="Laravel"
             >
@@ -525,7 +538,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Laravel
             </p>
@@ -536,7 +549,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://aws.amazon.com/"
               aria-label="AWS"
             >
@@ -553,7 +566,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               AWS
             </p>
@@ -563,7 +576,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://nodejs.org/en"
               aria-label="Node.js"
             >
@@ -580,7 +593,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Node.js
             </p>
@@ -590,7 +603,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://www.mysql.com/"
               aria-label="MySQL"
             >
@@ -607,7 +620,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               MySQL
             </p>
@@ -617,7 +630,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://tailwindcss.com/"
               aria-label="TailwindCSS"
             >
@@ -634,7 +647,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Tailwindcss
             </p>
@@ -644,7 +657,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://www.cloudflare.com/"
               aria-label="Cloudflare"
             >
@@ -661,7 +674,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Cloudflare
             </p>
@@ -671,7 +684,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://git-scm.com/"
               aria-label="Git"
             >
@@ -688,7 +701,7 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Git
             </p>
@@ -698,7 +711,7 @@
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
-              class="transform transition-transform duration-300 group-hover:scale-110"
+              class="transform transition-transform duration-300 group-hover:scale-110 bg-white/20 dark:bg-black/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 dark:border-white/10 shadow-lg"
               href="https://www.docker.com/"
               aria-label="Docker"
             >
@@ -715,136 +728,182 @@
               />
             </a>
             <p
-              class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
+              class="text-normal text-base md:text-lg text-white group-hover:text-white font-medium transition-colors duration-300"
             >
               Docker
             </p>
           </div>
         </div>
       </div>
+      
+      <!-- Bottom wave divider -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-0">
+        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" class="text-gray-50 dark:text-gray-900 relative block h-12 w-full">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-current"></path>
+        </svg>
+      </div>
     </section>
 
     <!-- Roadmap -->
     <section
       id="roadmap"
-      class="py-10 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-5 transition-colors duration-200"
+      class="py-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-5 transition-colors duration-200"
     >
-      <h2 class="text-3xl font-bold text-teal-600 dark:text-teal-400 text-center mb-8">
+      <h2 class="text-3xl font-bold text-teal-600 dark:text-teal-400 text-center mb-12">
         Minha Jornada 🚀
       </h2>
 
       <div class="max-w-3xl mx-auto">
-        <ul class="border-l-2 border-gray-300 dark:border-gray-700">
-          <!-- Etapa 1 -->
-          <li class="mb-8 pl-6 relative">
+        <ul class="border-l-2 border-gradient-to-b from-teal-400 to-purple-500 dark:from-teal-500 dark:to-purple-600">
+          <!-- Etapa 1: Estudos -->
+          <li class="mb-12 pl-8 relative group">
             <span
-              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+              class="absolute -left-[10px] top-[5px] bg-blue-500 dark:bg-blue-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
             ></span>
-            <h3 class="font-bold text-lg">2017 — Desenvolvimento de Jogos</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Iniciei minha jornada na programação aos 14 anos criando jogos em C# com Unity.
-              Desenvolvi a base da lógica de programação e comecei a me interessar por
-              desenvolvimento web.
-            </p>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-blue-500 dark:border-blue-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Estudos</span>
+              </div>
+              <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">2017 — Desenvolvimento de Jogos</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Iniciei minha jornada na programação aos 14 anos criando jogos em C# com Unity.
+                Desenvolvi a base da lógica de programação e comecei a me interessar por
+                desenvolvimento web.
+              </p>
+            </div>
           </li>
 
-          <!-- Etapa 2 -->
-          <li class="mb-8 pl-6 relative">
+          <!-- Etapa 2: Estudos -->
+          <li class="mb-12 pl-8 relative group">
             <span
-              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+              class="absolute -left-[10px] top-[5px] bg-blue-500 dark:bg-blue-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
             ></span>
-            <h3 class="font-bold text-lg">2018 — Entrei no Instituto Federal</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Entrei no curso técnico integrado em Informática, onde aprendi algoritmos, estrutura
-              de dados, banco de dados, desenvolvimento web e mobile, além de análise de sistemas.
-            </p>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-blue-500 dark:border-blue-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Estudos</span>
+              </div>
+              <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">2018 — Entrei no Instituto Federal</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Entrei no curso técnico integrado em Informática, onde aprendi algoritmos, estrutura
+                de dados, banco de dados, desenvolvimento web e mobile, além de análise de sistemas.
+              </p>
+            </div>
           </li>
 
-          <!-- Etapa 3 -->
-          <li class="mb-8 pl-6 relative">
+          <!-- Etapa 3: Trabalho -->
+          <li class="mb-12 pl-8 relative group">
             <span
-              class="absolute -left-[7px] top-[5px] bg-yellow-400 dark:bg-yellow-500 w-3 h-3 rounded-full"
+              class="absolute -left-[10px] top-[5px] bg-purple-500 dark:bg-purple-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
             ></span>
-            <h3 class="font-bold text-lg">Entre meio de 2019 e 2024</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Apesar de não estar focado em programação, continuei estudando por conta própria com
-              TypeScript e PHP, criando projetos para consolidar o conhecimento.
-            </p>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-purple-500 dark:border-purple-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">Trabalho</span>
+              </div>
+              <h3 class="font-bold text-xl text-purple-600 dark:text-purple-400">Eletroprev Engenharia</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Atuei como projetista de projetos civis, lidando diretamente com clientes e tomando
+                decisões técnicas. Essa experiência me deu visão de negócio e responsabilidade
+                profissional.
+              </p>
+            </div>
           </li>
 
-          <!-- Etapa 4 -->
-          <li class="mb-8 pl-6 relative">
+          <!-- Etapa 4: Projetos -->
+          <li class="mb-12 pl-8 relative group">
             <span
-              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+              class="absolute -left-[10px] top-[5px] bg-green-500 dark:bg-green-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
             ></span>
-            <h3 class="font-bold text-lg">2022 — Engenharia de Controle e Automação</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Iniciei a graduação em Engenharia de Controle e Automação, onde aprofundei
-              conhecimentos em cálculo, álgebra, física, eletrônica e programação aplicada à
-              engenharia.
-            </p>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-green-500 dark:border-green-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Projetos</span>
+              </div>
+              <h3 class="font-bold text-xl text-green-600 dark:text-green-400">Entre meio de 2019 e 2024</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Apesar de não estar focado em programação, continuei estudando por conta própria com
+                TypeScript e PHP, criando projetos para consolidar o conhecimento.
+              </p>
+            </div>
           </li>
 
-          <!-- Etapa 5 -->
-          <li class="mb-8 pl-6 relative">
+          <!-- Etapa 5: Estudos -->
+          <li class="mb-12 pl-8 relative group">
             <span
-              class="absolute -left-[7px] top-[5px] bg-pink-500 dark:bg-pink-600 w-3 h-3 rounded-full"
+              class="absolute -left-[10px] top-[5px] bg-blue-500 dark:bg-blue-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
             ></span>
-            <h3 class="font-bold text-lg">Eletroprev Engenharia</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Atuei como projetista de projetos civis, lidando diretamente com clientes e tomando
-              decisões técnicas. Essa experiência me deu visão de negócio e responsabilidade
-              profissional.
-            </p>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-blue-500 dark:border-blue-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Estudos</span>
+              </div>
+              <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">2022 — Engenharia de Controle e Automação</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Iniciei a graduação em Engenharia de Controle e Automação, onde aprofundei
+                conhecimentos em cálculo, álgebra, física, eletrônica e programação aplicada à
+                engenharia.
+              </p>
+            </div>
           </li>
 
-          <!-- Etapa 6 -->
-          <li class="mb-8 pl-6 relative">
+          <!-- Etapa 6: Projetos -->
+          <li class="mb-12 pl-8 relative group">
             <span
-              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
+              class="absolute -left-[10px] top-[5px] bg-green-500 dark:bg-green-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
             ></span>
-            <h3 class="font-bold text-lg">2023 — Oeste Orgânicos</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              No inicio entrei para dar suporte ao desenvolvimento, mas acabei me envolvendo com o
-              projeto e acabei me dedicando a ele. Passamos por diversas reformulações de requisitos
-              e hoje temos uma plataforma web e mobile. Nossa espectativa de lançamento é para
-              maio/2025.
-              <a
-                href="#projects"
-                class="text-xs text-teal-600 dark:text-teal-400 hover:underline"
-              >
-                Confira abaixo o projeto.
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-green-500 dark:border-green-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Projetos</span>
+              </div>
+              <h3 class="font-bold text-xl text-green-600 dark:text-green-400">2023 — Oeste Orgânicos</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                No inicio entrei para dar suporte ao desenvolvimento, mas acabei me envolvendo com o
+                projeto e acabei me dedicando a ele. Passamos por diversas reformulações de requisitos
+                e hoje temos uma plataforma web e mobile. Nossa expectativa de lançamento é para
+                junho/2025.
+                <a
+                  href="#projects"
+                  class="text-sm text-green-600 dark:text-green-400 hover:underline block mt-2"
+                >
+                  Confira abaixo o projeto →
+                </a>
+              </p>
+            </div>
+          </li>
+
+          <!-- Etapa 7: Estudos -->
+          <li class="mb-12 pl-8 relative group">
+            <span
+              class="absolute -left-[10px] top-[5px] bg-blue-500 dark:bg-blue-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
+            ></span>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-blue-500 dark:border-blue-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Estudos</span>
+              </div>
+              <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">2025 — Mudança para Engenharia de Software</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Decidi focar totalmente em desenvolvimento de software, migrando de Engenharia de
+                Controle e Automação para Engenharia de Software.
+              </p>
+            </div>
+          </li>
+
+          <!-- Etapa 8: Trabalho -->
+          <li class="mb-4 pl-8 relative group">
+            <span
+              class="absolute -left-[10px] top-[5px] bg-purple-500 dark:bg-purple-600 w-5 h-5 rounded-full shadow-md flex items-center justify-center border-2 border-white dark:border-gray-800 group-hover:scale-125 transition-transform duration-300"
+            ></span>
+            <div class="bg-gray-50 dark:bg-gray-800/60 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border-l-4 border-purple-500 dark:border-purple-600">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">Trabalho</span>
+              </div>
+              <h3 class="font-bold text-xl text-purple-600 dark:text-purple-400">2025 — Five Tech</h3>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Atuo como desenvolvedor fullstack em uma startup que está criando um sistema de gestão
+                de licitações. Participo do desenvolvimento de novas features, arquitetura de banco de
+                dados, testes e debug de sistemas críticos.
+              </p>
+              <a href="#experiences" class="text-sm text-purple-600 dark:text-purple-400 hover:underline block mt-2">
+                Confira abaixo as tecnologias que utilizo →
               </a>
-            </p>
-          </li>
-
-          <!-- Etapa 7 -->
-          <li class="mb-8 pl-6 relative">
-            <span
-              class="absolute -left-[7px] top-[5px] bg-green-500 dark:bg-green-600 w-3 h-3 rounded-full"
-            ></span>
-            <h3 class="font-bold text-lg">2025 — Mudança para Engenharia de Software</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Decidi focar totalmente em desenvolvimento de software, migrando de Engenharia de
-              Controle e Automação para Engenharia de Software.
-            </p>
-          </li>
-
-          <!-- Etapa 8 -->
-          <li class="mb-8 pl-6 relative">
-            <span
-              class="absolute -left-[7px] top-[5px] bg-teal-400 dark:bg-teal-500 w-3 h-3 rounded-full"
-            ></span>
-            <h3 class="font-bold text-lg">2025 — Five Tech</h3>
-            <p class="text-gray-700 dark:text-gray-300">
-              Atuo como desenvolvedor fullstack em uma startup que está criando um sistema de gestão
-              de licitações. Participo do desenvolvimento de novas features, arquitetura de banco de
-              dados, testes e debug de sistemas críticos.
-            </p>
-
-            <a href="#experiences" class="text-xs text-teal-600 dark:text-teal-400 hover:underline">
-              Confira abaixo as tecnologias que utilizo.
-            </a>
+            </div>
           </li>
         </ul>
       </div>
@@ -958,94 +1017,86 @@
           <!-- Five Tech -->
           <div
             id="five-tech"
-            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200 hover:shadow-xl transform hover:-translate-y-1 transition-transform duration-300"
+            class="bg-white/70 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700/50 border-l-4 border-emerald-500 dark:border-emerald-400 transform hover:-translate-y-1 transition-all duration-300 w-full"
             data-aos="zoom-in"
           >
-            <div
-              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full"
-            >
-              <div class="flex items-center gap-4 mb-4">
-                <div>
-                  <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">
-                    Desenvolvedor Fullstack
-                  </h3>
-                  <p class="text-sm text-gray-400 italic">Five Tech | janeiro/2025 - atual</p>
-                </div>
+            <div class="flex items-center gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">
+                  Desenvolvedor Fullstack
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 italic">Five Tech | janeiro/2025 - atual</p>
               </div>
-              <p class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4">
-                - Desenvolvimento de plataforma web para gestão de processos de licitações.
-                <br>
-                - Implementação de funcionalidades completas (backend e frontend).
-                <br>
-                - Tomada de decisões arquiteturais (banco, autenticação, estrutura de código).
-                <br>
-                - Criação e manutenção de testes automatizados para garantir a qualidade e estabilidade do sistema.
-                <br>
-                Stack: <b>Laravel, Filament, MingleJs, TypeScript, React, MySQL, Github, AWS</b>
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >Laravel</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >FilamentPHP</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >TypeScript</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >React</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >MySQL</span
-                >
-              </div>
+            </div>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              - Desenvolvimento de plataforma web para gestão de processos de licitações.
+              <br>
+              - Implementação de funcionalidades completas (backend e frontend).
+              <br>
+              - Tomada de decisões arquiteturais (banco, autenticação, estrutura de código).
+              <br>
+              - Criação e manutenção de testes automatizados para garantir a qualidade e estabilidade do sistema.
+              <br>
+              Stack: <b>Laravel, Filament, MingleJs, TypeScript, React, MySQL, Github, AWS</b>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >Laravel</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >FilamentPHP</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >TypeScript</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >MySQL</span
+              >
             </div>
           </div>
           <!-- Eletroprev Engenharia -->
           <div
-            class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-200 hover:shadow-xl transform hover:-translate-y-1 transition-transform duration-300"
+            class="bg-white/70 dark:bg-gray-800/50 backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700/50 border-l-4 border-emerald-500 dark:border-emerald-400 transform hover:-translate-y-1 transition-all duration-300 w-full"
             data-aos="zoom-in"
           >
-            <div
-              class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full"
-            >
-              <div class="flex items-center gap-4 mb-4">
-                <div>
-                  <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">
-                    Projetista Civil
-                  </h3>
-                  <p class="text-sm text-gray-400 italic">Eletroprev Engenharia | 2019 - 2025</p>
-                </div>
+            <div class="flex items-center gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">
+                  Projetista Civil
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 italic">Eletroprev Engenharia | 2019 - 2025</p>
               </div>
-              <p class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4">
-                Atuei como projetista de projetos civis, lidando diretamente com clientes e tomando
-                decisões técnicas. Essa experiência me deu visão de negócio e responsabilidade
-                profissional.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >AutoCAD</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >Revit</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >Excel</span
-                >
-                <span
-                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
-                  >Word</span
-                >
-              </div>
+            </div>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              Atuei como projetista de projetos civis, lidando diretamente com clientes e tomando
+              decisões técnicas. Essa experiência me deu visão de negócio e responsabilidade
+              profissional.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >AutoCAD</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >Revit</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >Excel</span
+              >
+              <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >Word</span
+              >
             </div>
           </div>
         </div>
@@ -1154,5 +1205,9 @@
     </footer>
 
     <script src="scripts.js"></script>
+
+    <!-- 
+     Obrigado por se interessar no meu código <3
+    -->
   </body>
 </html>
