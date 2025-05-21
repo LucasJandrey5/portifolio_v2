@@ -302,7 +302,7 @@
 
       <!-- Botões -->
       <div class="flex flex-col items-center justify-center gap-4 mt-8 lg:mt-0 order-3 px-4">
-        <div class="flex">
+        <!-- <div class="flex">
           <a
             href="/curriculo.html"
             class="flex items-center bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full gap-2 backdrop-blur-sm border border-gray-300 dark:border-white/10 transition-all duration-300 hover:scale-105"
@@ -326,13 +326,13 @@
               />
             </svg>
           </a>
-        </div>
+        </div> -->
+
         <div class="relative group">
           <button class="copy-btn group relative" onclick="copyEmail(this)">
             <span>lucasjandrey5@gmail.com</span>
             <div class="check hidden group-hover:block absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-green-500 text-white text-xs px-2 py-1 rounded">Copiado ✔</div>
           </button>
-         <!-- <span class="flex absolute text-[10px] mt-2 top-full mt-1 bg-gray-300 px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 left-1/2 -translate-x-1/2 dark:bg-gray-700 dark:text-gray-300">Clique para copiar!</span> -->
         </div>
        
         <div class="flex">
@@ -341,7 +341,7 @@
             class="flex items-center bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full gap-2 backdrop-blur-sm border border-gray-300 dark:border-white/10 transition-all duration-300 hover:scale-105"
           >
             <svg
-            height="24px"
+            height="18px"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -355,36 +355,6 @@
           </a>
         </div>
 
-        <!-- <div class="flex">
-          <a
-            target="_blank"
-            class="hero-button bg-orange-500/80 dark:bg-purple-600/80 hover:bg-orange-600 dark:hover:bg-purple-500 text-white px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-          >
-            <span id="zap"></span>
-            <svg
-              height="24px"
-              id="Layer_1"
-              version="1.1"
-              viewBox="0 0 56.693 56.693"
-              fill="currentColor"
-            >
-              <style type="text/css">
-                .st0 {
-                  fill-rule: evenodd;
-                  clip-rule: evenodd;
-                }
-              </style>
-              <path
-                class="st0"
-                d="M46.3802,10.7138c-4.6512-4.6565-10.8365-7.222-17.4266-7.2247c-13.5785,0-24.63,11.0506-24.6353,24.6333   c-0.0019,4.342,1.1325,8.58,3.2884,12.3159l-3.495,12.7657l13.0595-3.4257c3.5982,1.9626,7.6495,2.9971,11.7726,2.9985h0.01   c0.0008,0-0.0006,0,0.0002,0c13.5771,0,24.6293-11.0517,24.635-24.6347C53.5914,21.5595,51.0313,15.3701,46.3802,10.7138z    M28.9537,48.6163h-0.0083c-3.674-0.0014-7.2777-0.9886-10.4215-2.8541l-0.7476-0.4437l-7.7497,2.0328l2.0686-7.5558   l-0.4869-0.7748c-2.0496-3.26-3.1321-7.028-3.1305-10.8969c0.0044-11.2894,9.19-20.474,20.4842-20.474   c5.469,0.0017,10.6101,2.1344,14.476,6.0047c3.8658,3.8703,5.9936,9.0148,5.9914,14.4859   C49.4248,39.4307,40.2395,48.6163,28.9537,48.6163z"
-              />
-              <path
-                class="st0"
-                d="M40.1851,33.281c-0.6155-0.3081-3.6419-1.797-4.2061-2.0026c-0.5642-0.2054-0.9746-0.3081-1.3849,0.3081   c-0.4103,0.6161-1.59,2.0027-1.9491,2.4136c-0.359,0.4106-0.7182,0.4623-1.3336,0.1539c-0.6155-0.3081-2.5989-0.958-4.95-3.0551   c-1.83-1.6323-3.0653-3.6479-3.4245-4.2643c-0.359-0.6161-0.0382-0.9492,0.27-1.2562c0.2769-0.2759,0.6156-0.7189,0.9234-1.0784   c0.3077-0.3593,0.4103-0.6163,0.6155-1.0268c0.2052-0.4109,0.1027-0.7704-0.0513-1.0784   c-0.1539-0.3081-1.3849-3.3379-1.8978-4.5706c-0.4998-1.2001-1.0072-1.0375-1.3851-1.0566   c-0.3585-0.0179-0.7694-0.0216-1.1797-0.0216s-1.0773,0.1541-1.6414,0.7702c-0.5642,0.6163-2.1545,2.1056-2.1545,5.1351   c0,3.0299,2.2057,5.9569,2.5135,6.3676c0.3077,0.411,4.3405,6.6282,10.5153,9.2945c1.4686,0.6343,2.6152,1.013,3.5091,1.2966   c1.4746,0.4686,2.8165,0.4024,3.8771,0.2439c1.1827-0.1767,3.6419-1.489,4.1548-2.9267c0.513-1.438,0.513-2.6706,0.359-2.9272   C41.211,33.7433,40.8006,33.5892,40.1851,33.281z"
-              />
-            </svg>
-          </a>
-        </div> -->
       </div>
     </section>
 
@@ -561,16 +531,17 @@
             </p>
           </div>
 
-          <!-- Next.js -->
+
+          <!-- AWS -->
           <div class="flex flex-col items-center gap-2 group">
             <a
               target="_blank"
               class="transform transition-transform duration-300 group-hover:scale-110"
-              href="https://nextjs.org/"
-              aria-label="Next.js"
+              href="https://aws.amazon.com/"
+              aria-label="AWS"
             >
               <img
-                alt="Next.js"
+                alt="AWS"
                 loading="lazy"
                 width="64"
                 height="64"
@@ -578,13 +549,13 @@
                 data-nimg="1"
                 class="transition-transform duration-300"
                 style="color: transparent"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
               />
             </a>
             <p
               class="text-normal text-base md:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300"
             >
-              Next.js
+              AWS
             </p>
           </div>
 
@@ -938,6 +909,14 @@
                   class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
                   >JWT</span
                 >
+                <span
+                class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                >AWS</span
+                >
+                <span
+                  class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-xs"
+                  >Git</span
+                >
               </div>
 
               <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
@@ -994,10 +973,15 @@
                 </div>
               </div>
               <p class="text-sm text-gray-800 dark:text-gray-300 leading-relaxed mb-4">
-                Participo da criação de uma plataforma web para gestão de processos de licitações.
-                Sou responsável por implementar funcionalidades no backend e frontend, além de
-                contribuir ativamente nas decisões técnicas sobre arquitetura de software e
-                modelagem de banco de dados.
+                - Desenvolvimento de plataforma web para gestão de processos de licitações.
+                <br>
+                - Implementação de funcionalidades completas (backend e frontend).
+                <br>
+                - Tomada de decisões arquiteturais (banco, autenticação, estrutura de código).
+                <br>
+                - Criação e manutenção de testes automatizados para garantir a qualidade e estabilidade do sistema.
+                <br>
+                Stack: <b>Laravel, Filament, MingleJs, TypeScript, React, MySQL, Github, AWS</b>
               </p>
               <div class="flex flex-wrap gap-2">
                 <span
@@ -1034,7 +1018,7 @@
               <div class="flex items-center gap-4 mb-4">
                 <div>
                   <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">
-                    Projetista
+                    Projetista Civil
                   </h3>
                   <p class="text-sm text-gray-400 italic">Eletroprev Engenharia | 2019 - 2025</p>
                 </div>
