@@ -1,0 +1,25 @@
+{
+  "name": "portifolio-lucas-jandrey",
+  "version": "2.0.0",
+  "description": "Portfólio pessoal com arquitetura modular e suporte a i18n",
+  "type": "module",
+  "scripts": {
+    "dev": "node dev-server.js 8000",
+    "start": "node dev-server.js",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "javascript",
+    "tailwindcss",
+    "i18n",
+    "modular"
+  ],
+  "author": "Lucas Jandrey <lucasjandrey5@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LucasJandrey5/portifolio_v2"
+  }
+}
+
